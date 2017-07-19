@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("fonts/Oswald.woff2") format("woff2"),
+       url("fonts/Oswald.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("fonts/BebasNeue.woff2") format("woff2"),
+       url("fonts/BebasNeue.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  margin: 0;
+  line-height: normal;
+}
+
+a{
+  text-decoration: none;
+}
+
+.title{
+  margin: 0;
+  padding: 0;
+}
+
+.main-container{
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.header{
+  box-sizing: border-box;
+  height: 110px;
+  position: relative;
+}
+
+.header__logo{
+  position: absolute;
+  left: 215px;
+  padding-top: 29px;
+  padding-bottom: 30px;
+  width: 135px;
+  height: 51px;
+}
+
+.menu{
+  position: absolute;
+  left: 844px;
+}
+
+.menu__item{
+  display: inline-block;
+  box-sizing: border-box;
+  height: 110px;
+  padding: 47px 17px 47px 17px;
+  font-size: 17px;
+  font-family: "Oswald";
+  color: #858585;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu__item:hover{
+  background-color: #fd5433;
+  color: #fff;
+}
+
+.home{
+  height: 800px;
+  background-blend-mode: multiply;
+  background-image: url("../images/Banner IMG.png");
+  background-repeat: no-repeat;
+  background-color: rgba(81, 81, 81, 0.4);
+}
+
+.home__button-box{
+  width: 970px;
+  margin: 0 auto;
+  padding-top: 240px;
+  position: relative;
+  text-align: center;
+}
+
+.button-box__text {
+  font-family: "BebasNeue", sans-serif;
+  font-size: 65px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.button-box__button{
+  margin-top: 55px;
+  padding: 0;
+  height: 60px;
+  width: 280px;
+  background-color: #fd5433;
+  font-size: 30px;
+  font-family: "Oswald";
+  color: #fff;
+  border: 0;
+  outline: 0;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.services{
+  height: 590px;
+}
+
+.services__header{
+  height: 99px;
+  border-bottom: 1px solid #858585;
+}
+
+.services__header-title{
+  padding-top: 25px;
+  color: #fd5433;
+  font-size: 32px;
+  font-family: "Oswald";
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.services-container{
+  padding-left: 215px;
+  padding-right: 215px;
+}
+
+.services-container__column{
+  display: inline-block;
+  width: 370px;
+  height: 480px;
+  margin-right: 22px;
+  position: relative;
+}
+
+.services-container__column:last-child{
+  margin-right: 0;
+}
+
+.services__icon-box{
+  padding: 64px 100px 0px 100px;
+  margin-bottom: 34px;
+}
+
+.services__icon{
+  width: 170px;
+  height: 170px;
+  margin-bottom: 34px;
+  background-repeat: no-repeat;
+}
+
+.pen{
+  background-image: url("../images/Pen.png");
+}
+
+.pc{
+  background-image: url("../images/PC.png");
+}
+
+.mic{
+  background-image: url("../images/Mic.png");
+}
+
+.services__icon-title{
+  font-size: 30px;
+  font-family: "Oswald";
+  color: #3d3c3c;
+  font-weight: bold;
+  text-align: center;
+}
+
+.services-text{
+  font-size: 16px;
+  font-family: "Arial";
+  color: #121212;
+  line-height: 1.25;
+  text-align: center;
+}
