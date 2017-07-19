@@ -34,7 +34,6 @@ a{
 }
 
 .header{
-  box-sizing: border-box;
   height: 110px;
   position: relative;
 }
