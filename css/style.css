@@ -1,185 +1,298 @@
 @font-face {
   font-family: "Oswald";
-  src: url("fonts/Oswald.woff2") format("woff2"),
-       url("fonts/Oswald.woff") format("woff");
+  src: url("../fonts/oswald.woff2") format("woff2"),
+       url("../fonts/oswald.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "BebasNeue";
-  src: url("fonts/BebasNeue.woff2") format("woff2"),
-       url("fonts/BebasNeue.woff") format("woff");
+  src: url("../fonts/bebasneue.woff2") format("woff2"),
+       url("../fonts/bebasneue.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
+::-webkit-progress-value {
+    background: #fff;
+}
+::-moz-progress-bar {
+    background: #fff;
+}
+
 body{
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
   margin: 0;
-  line-height: normal;
 }
 
 a{
   text-decoration: none;
 }
 
+p{
+  margin: 0;
+}
+
 .title{
   margin: 0;
-  padding: 0;
 }
 
 .main-container{
-  width: 1600px;
+  width: 1150px;
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .header{
-  height: 110px;
-  position: relative;
+  background-color: #fff;
+  min-width: 1170px;
 }
 
 .header__logo{
   position: absolute;
-  left: 215px;
-  padding-top: 29px;
-  padding-bottom: 30px;
-  width: 135px;
-  height: 51px;
+  left: -9999px;
 }
 
-.menu{
-  position: absolute;
-  left: 844px;
+.header__logo-img{
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 29px;
+  width: 135px;
+  height: 51px;
+  background-image: url("../images/head-logo.png");
+  background-repeat: no-repeat;
+}
+
+.header__menu{
+  float: right;
 }
 
 .menu__item{
   display: inline-block;
-  box-sizing: border-box;
-  height: 110px;
-  padding: 47px 17px 47px 17px;
+  text-transform: uppercase;
+  font-family: "Oswald";
   font-size: 17px;
-  font-family: "Oswald";
-  color: #858585;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.menu__item:hover{
-  background-color: #fd5433;
-  color: #fff;
-}
-
-.home{
-  height: 800px;
-  background-blend-mode: multiply;
-  background-image: url("../images/Banner IMG.png");
-  background-repeat: no-repeat;
-  background-color: rgba(81, 81, 81, 0.4);
-}
-
-.home__button-box{
-  width: 970px;
-  margin: 0 auto;
-  padding-top: 240px;
-  position: relative;
-  text-align: center;
-}
-
-.button-box__text {
-  font-family: "BebasNeue", sans-serif;
-  font-size: 65px;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.button-box__button{
-  margin-top: 55px;
-  padding: 0;
-  height: 60px;
-  width: 280px;
-  background-color: #fd5433;
-  font-size: 30px;
-  font-family: "Oswald";
-  color: #fff;
-  border: 0;
-  outline: 0;
-  text-transform: uppercase;
-  border-radius: 10px;
+  color: #8e8e8e;
+  padding-left: 18px;
+  padding-right: 17px;
   cursor: pointer;
 }
 
-.services{
-  height: 590px;
+.header__menu-item{
+  padding-top: 43px;
+  padding-bottom: 42px;
 }
 
-.services__header{
-  height: 99px;
-  border-bottom: 1px solid #858585;
+.header__menu-item:hover{
+  color: #fff;
+  background-color: #fd5433;
 }
 
-.services__header-title{
-  padding-top: 25px;
-  color: #fd5433;
-  font-size: 32px;
+.banner{
+  background-image: url("../images/banner-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  min-height: 800px;
+  min-width: 1170px;
+}
+
+.banner__container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+}
+
+.banner::before{
+  content: "";
+  position: absolute;
+  background-color: rgba(81, 81, 81, 0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner__title{
+  font-family: "BebasNeue";
+  font-size: 124px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0 0 23px 0px;
+  font-weight: normal;
+}
+
+.banner__button{
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #fd5433;
+  border-radius: 5px;
   font-family: "Oswald";
-  font-weight: bold;
+  font-size: 32px;
+  color: #fff;
+  padding: 15px 65px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.banner__button:focus{
+  outline: 1px solid black;
+}
+
+.section{
+  min-width: 1170px;
+}
+
+.section__header{
+  background-color: #fff;
+  border-bottom: 1px solid #8e8e8e;
+  min-width: 1170px;
+  padding-top: 29px;
+  padding-bottom: 26px;
+}
+
+.section__header-title{
+  color: #fd5433;
+  font-family: "Oswald";
+  font-size: 32px;
+  margin: 0;
   text-align: center;
   text-transform: uppercase;
 }
 
-.services-container{
-  padding-left: 215px;
-  padding-right: 215px;
+.section__content{
+  background-color: #fff;
+  border-bottom: 1px solid #8e8e8e;
+  min-width: 1170px;
 }
 
-.services-container__column{
+.services{
+  padding-top: 67px;
+  padding-bottom: 68px;
+}
+
+.section__column{
+  vertical-align: top;
   display: inline-block;
-  width: 370px;
-  height: 480px;
-  margin-right: 22px;
+  text-align: center;
   position: relative;
 }
 
-.services-container__column:last-child{
+.section__column_three{
+  width: 31%;
+  margin-right: 2%;
+}
+
+.section__column_four{
+  width: 22%;
+  margin-right: 2%;
+}
+
+.section__column:first-child{
+  margin-left: 1%;
+}
+
+.section__column:last-child{
   margin-right: 0;
 }
 
-.services__icon-box{
-  padding: 64px 100px 0px 100px;
-  margin-bottom: 34px;
-}
-
-.services__icon{
+.section__icon{
+  margin-left: auto;
+  margin-right: auto;
   width: 170px;
   height: 170px;
-  margin-bottom: 34px;
-  background-repeat: no-repeat;
+  margin-bottom: 28px;
 }
 
-.pen{
-  background-image: url("../images/Pen.png");
+.pc-icon{
+  background-image: url("../images/pc.png");
 }
 
-.pc{
-  background-image: url("../images/PC.png");
-}
-
-.mic{
-  background-image: url("../images/Mic.png");
-}
-
-.services__icon-title{
-  font-size: 30px;
+.section__content-title{
+  margin: 0 0 32px 0;
   font-family: "Oswald";
+  font-size: 30px;
   color: #3d3c3c;
-  font-weight: bold;
-  text-align: center;
+  text-transform: uppercase;
 }
 
-.services-text{
-  font-size: 16px;
-  font-family: "Arial";
-  color: #121212;
-  line-height: 1.25;
-  text-align: center;
+.portfolio{
+  max-width: 662px;
+  margin: 0 auto;
+}
+
+.portfolio__item{
+  float: left;
+  width: 16.6667vh;
+  height: 16.6667vh;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio__img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+}
+
+.about-us__avatar{
+  width: 218px;
+  height: 218px;
+  margin: 63px 27px 63px 25px;
+}
+
+.about-us__employee-info{
+  background-color: #fd5433;
+  color: #fff;
+  padding-top: 64px;
+  padding-bottom: 47px;
+}
+
+.about-us__employee-bio{
+  box-sizing: border-box;
+  padding-right: 2%;
+  width: 48%;
+  float: left;
+  margin-right: 2%;
+}
+
+.about-us__employee-skills{
+  width: 50%;
+  float: left;
+}
+
+.about-us__content{
+  margin-bottom: 53px;
+}
+
+.about-us__title{
+  margin: 0 0 52px 0;
+  font-family: "Oswald";
+  font-size: 22px;
+}
+
+.social-link{
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.socail-icon{
+  width: 26px;
+  height: 26px;
 }
