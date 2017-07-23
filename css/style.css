@@ -126,12 +126,13 @@ p{
 }
 
 .banner__button{
-  padding: 0;
   border: none;
   outline: none;
   cursor: pointer;
   background-color: #fd5433;
   border-radius: 5px;
+  box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.8),
+  inset 0px 2px 1px 0px rgba(255, 255, 255, 0.3);
   font-family: "Oswald";
   font-size: 32px;
   color: #fff;
@@ -212,6 +213,7 @@ p{
   color: #3d3c3c;
   text-transform: uppercase;
 }
+
 /*
 .portfolio{
   max-width: 662px;
