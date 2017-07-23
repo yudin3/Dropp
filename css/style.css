@@ -30,6 +30,20 @@ p{
 
 .title{
   margin: 0;
+  text-transform: uppercase;
+  font-family: "Oswald";
+}
+
+.title_xl{
+    font-size: 124px;
+}
+
+.title_l{
+    font-size: 32px;
+}
+
+.title_m{
+    font-size: 30px;
 }
 
 .main-container{
@@ -50,7 +64,7 @@ p{
 }
 
 .header__logo{
-  margin: 31px 0 0 0;
+  margin-top: 31px;
   float: left;
   position: relative;
   width: 135px;
@@ -117,11 +131,9 @@ p{
 
 .banner__title{
   font-family: "BebasNeue";
-  font-size: 124px;
   color: #fff;
-  text-transform: uppercase;
   white-space: nowrap;
-  margin: 0 0 23px 0px;
+  margin-bottom: 23px;
   font-weight: normal;
 }
 
@@ -149,6 +161,10 @@ p{
   background-color: #fff;
 }
 
+.services{
+  text-align: center;
+}
+
 .section__header{
   border-bottom: 1px solid #8e8e8e;
   padding-top: 29px;
@@ -157,61 +173,54 @@ p{
 
 .section__header-title{
   color: #fd5433;
-  font-family: "Oswald";
-  font-size: 32px;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .section__content{
   border-bottom: 1px solid #8e8e8e;
 }
 
-.services{
+.section__column{
+  vertical-align: top;
+  display: inline-block;
+}
+
+.services__column{
+  width: 360px;
+  margin-right: 20px;
   padding-top: 67px;
   padding-bottom: 68px;
 }
 
-.section__column{
-  vertical-align: top;
-  display: inline-block;
-  text-align: center;
+.services__column::before{
+  content: "";
+  display: block;
   position: relative;
+  left: 50%;
+  transform: translate( -50%, 0);
+  width: 170px;
+  height: 170px;
+  margin-bottom: 28px;
 }
 
-.section__column_three{
-  width: 31%;
-  margin-right: 2%;
+.services__column_branding::before{
+  background-image: url("../images/pen.png");
 }
 
-.section__column_four{
-  width: 22%;
-  margin-right: 2%;
+.services__column_web-design::before{
+  background-image: url("../images/pc.png");
+}
+
+.services__column_marketing::before{
+  background-image: url("../images/mic.png");
 }
 
 .section__column:last-child{
   margin-right: 0;
 }
 
-.section__icon{
-  margin-left: auto;
-  margin-right: auto;
-  width: 170px;
-  height: 170px;
-  margin-bottom: 28px;
-}
-
-.mic-icon{
-  background-image: url("../images/mic.png");
-}
-
 .section__content-title{
-  margin: 0 0 32px 0;
-  font-family: "Oswald";
-  font-size: 30px;
+  margin-bottom: 32px;
   color: #3d3c3c;
-  text-transform: uppercase;
 }
 
 /*
