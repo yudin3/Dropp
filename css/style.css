@@ -47,7 +47,8 @@ p{
 }
 
 .main-container{
-  width: 1150px;
+  min-width: 280px;
+  max-width: 1150px;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
@@ -177,6 +178,8 @@ p{
 
 .section__content{
   border-bottom: 1px solid #8e8e8e;
+  padding-top: 67px;
+  padding-bottom: 68px;
 }
 
 .section__column{
@@ -185,18 +188,13 @@ p{
 }
 
 .services__column{
-  width: 360px;
-  margin-right: 20px;
-  padding-top: 67px;
-  padding-bottom: 68px;
+  width: 31%;
+  margin-right: 2%;
 }
 
 .services__column::before{
   content: "";
-  display: block;
-  position: relative;
-  left: 50%;
-  transform: translate( -50%, 0);
+  display: inline-block;
   width: 170px;
   height: 170px;
   margin-bottom: 28px;
