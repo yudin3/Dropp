@@ -1,0 +1,45 @@
+.services{
+  text-align: center;
+}
+
+.services__content{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.services__column{
+  box-sizing: border-box;
+  width: 33%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 62px;
+  padding-bottom: 48px;
+  &::before{
+    content: "";
+    display: inline-block;
+    padding-top: 50%;
+    padding-right: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 31px;
+  }
+}
+
+.services__column_branding{
+  &::before{
+    background-image: url("../images/pen.png");
+  }
+}
+
+.services__column_web-design{
+  &::before{
+    background-image: url("../images/pc.png");
+  }
+}
+
+.services__column_marketing{
+  &::before{
+    background-image: url("../images/mic.png");
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "dropp",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yudin3/Dropp.git"
+  },
+  "author": "artem_yudin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yudin3/Dropp/issues"
+  },
+  "homepage": "https://github.com/yudin3/Dropp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-less": "^3.3.2"
+  }
+}

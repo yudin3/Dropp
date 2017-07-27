@@ -7,7 +7,7 @@
 </head>
 <body>
   <header class="header">
-    <div class="main-container flex-container flex-container_header">
+    <div class="main-container header__container">
       <h1 class="header__logo title title_l">
         Dr<span class="header__logo_orange">O</span>pp
       </h1>
@@ -21,12 +21,12 @@
       </nav>
     </div>
   </header>
-  <div class="banner flex-container flex-container_banner">
-    <div class="banner__container">
+  <div class="banner">
+    <div class="main-container">
       <h2 class="banner__title title title_xl">
         Come,stay for a coffee!
       </h2>
-      <button class="banner__button" type="button">
+      <button class="banner__button button" type="button">
           Have a seat
       </button>
     </div>
@@ -40,7 +40,7 @@
       </div>
     </header>
     <div class="section__content">
-      <div class="main-container flex-container flex-container_services">
+      <div class="main-container services__content">
         <article class="section__column services__column services__column_branding">
           <h3 class="section__content-title title title_s">
             Branding
@@ -80,129 +80,147 @@
       </div>
     </div>
   </section>
-  <!--<section class="section">
+  <section class="section portfolio">
     <header class="section__header">
       <div class="main-container">
-        <h2 class="section__header-title">
+        <h2 class="section__header-title title title_m">
           Portfolio
         </h2>
       </div>
     </header>
     <div class="section__content">
-      <div class="portfolio clearfix">
+      <div class="portfolio__container">
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/work.png" alt="image">
+          <img class="portfolio__img" src="images/post-1.png" alt="portfolio-example">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/work.png" alt="image">
+          <img class="portfolio__img" src="images/post-2.png" alt="portfolio-example">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/work.png" alt="image">
+          <img class="portfolio__img" src="images/post-1.png" alt="portfolio-example">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/work.png" alt="image">
+          <img class="portfolio__img" src="images/post-2.png" alt="portfolio-example">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/work.png" alt="image">
+          <img class="portfolio__img" src="images/post-3.png" alt="portfolio-example">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/work.png" alt="image">
+          <img class="portfolio__img" src="images/post-4.png" alt="portfolio-example">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/work.png" alt="image">
+          <img class="portfolio__img" src="images/post-5.png" alt="portfolio-example">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/work.png" alt="image">
+          <img class="portfolio__img" src="images/post-6.png" alt="portfolio-example">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/work.png" alt="image">
+          <img class="portfolio__img" src="images/post-5.png" alt="portfolio-example">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/work.png" alt="image">
+          <img class="portfolio__img" src="images/post-6.png" alt="portfolio-example">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/work.png" alt="image">
+          <img class="portfolio__img" src="images/post-7.png" alt="portfolio-example">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/work.png" alt="image">
+          <img class="portfolio__img" src="images/post-8.png" alt="portfolio-example">
         </div>
       </div>
     </div>
   </section>
-  <section class="section about-us">
+  <section class="section latest-posts">
     <header class="section__header">
       <div class="main-container">
-        <h2 class="section__header-title">
-          About Us
+        <h2 class="section__header-title title title_m">
+          Latest posts
         </h2>
       </div>
     </header>
     <div class="section__content">
-      <div class="main-container">
-        <div class="about-us__employees">
-          <div class="section__column section__column_four">
-            <img class="about-us__avatar" src="images/avatar-1.jpg" alt="Avatar">
+      <div class="main-container latest-posts__content">
+        <article class="post">
+          <div class="post__column">
+            <img class="post__image" src="images/post.png" alt="girl-photo">
           </div>
-          <div class="section__column section__column_four">
-            <img class="about-us__avatar" src="images/avatar-1.jpg" alt="Avatar">
-          </div>
-          <div class="section__column section__column_four">
-            <img class="about-us__avatar" src="images/avatar-1.jpg" alt="Avatar">
-          </div>
-          <div class="section__column section__column_four">
-            <img class="about-us__avatar" src="images/avatar-1.jpg" alt="Avatar">
-          </div>
-        </div>
-      </div>
-      <div class="about-us__employee-info clearfix">
-        <div class="main-container">
-          <div class="about-us__employee-bio">
-            <article class="about-us__content">
-              <h2 class="about-us__title">
-                John Smith
-              </h2>
+          <div class="post__column">
+            <div class="post__header">
+              <h3 class="post__title title title_ms">
+                Summer adventures
+              </h3>
+              <span class="post__date">Posted: dec 14 2013</span>
+            </div>
+            <div class="post__content">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+                We can always be on our best of wors behavior, depending on our
+                surroundings and energy the elements give us. Summertime is
+                usually the season to unwind
               </p>
-            </article>
-            <div class="about-us__social-links">
-              <a class="social-link" href="#">
-                <img class="social-icon" src="images/facebook.svg">
-              </a>
-              <a class="social-link" href="#">
-                <img class="social-icon" src="images/facebook.svg">
-              </a>
-              <a class="social-link" href="#">
-                <img class="social-icon" src="images/facebook.svg">
-              </a>
-              <a class="social-link" href="#">
-                <img class="social-icon" src="images/facebook.svg">
-              </a>
-              <a class="social-link" href="#">
-                <img class="social-icon" src="images/facebook.svg">
-              </a>
             </div>
           </div>
-          <div class="about-us__employee-skills">
-            <div class="about-us__content">
-              <h2 class="about-us__title">
-                Skills
-              </h2>
-              <div class="about-us__skill">
-
-              </div>
+        </article>
+        <article class="post">
+          <div class="post__column">
+            <img class="post__image" src="images/post.png" alt="girl-photo">
+          </div>
+          <div class="post__column">
+            <div class="post__header">
+              <h3 class="post__title title title_ms">
+                Summer adventures
+              </h3>
+              <span class="post__date">Posted: dec 14 2013</span>
+            </div>
+            <div class="post__content">
+              <p>
+                We can always be on our best of wors behavior, depending on our
+                surroundings and energy the elements give us. Summertime is
+                usually the season to unwind
+              </p>
             </div>
           </div>
-        </div>
+        </article>
+        <article class="post">
+          <div class="post__column">
+            <img class="post__image" src="images/post.png" alt="girl-photo">
+          </div>
+          <div class="post__column">
+            <div class="post__header">
+              <h3 class="post__title title title_ms">
+                Summer adventures
+              </h3>
+              <span class="post__date">Posted: dec 14 2013</span>
+            </div>
+            <div class="post__content">
+              <p>
+                We can always be on our best of wors behavior, depending on our
+                surroundings and energy the elements give us. Summertime is
+                usually the season to unwind
+              </p>
+            </div>
+          </div>
+        </article>
+        <article class="post">
+          <div class="post__column">
+            <img class="post__image" src="images/post.png" alt="girl-photo">
+          </div>
+          <div class="post__column">
+            <div class="post__header">
+              <h3 class="post__title title title_ms">
+                Summer adventures
+              </h3>
+              <span class="post__date">Posted: dec 14 2013</span>
+            </div>
+            <div class="post__content">
+              <p>
+                We can always be on our best of wors behavior, depending on our
+                surroundings and energy the elements give us. Summertime is
+                usually the season to unwind
+              </p>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
-  </section>-->
+  </section>
 </body>
 </html>

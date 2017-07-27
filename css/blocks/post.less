@@ -1,0 +1,46 @@
+.post{
+  width: 560px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.post__column{
+  width: 270px;
+}
+
+.post__image{
+  width: 270px;
+  height: 200px;
+}
+
+.post__header{
+  position: relative;
+  margin-bottom: 47px;
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #fd5433;
+  }
+}
+
+.post__title{
+  color: #3d3c3c;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.post__date{
+  font-family: "Oswald";
+  font-size: 15px;
+  color: #686868;
+  text-transform: uppercase;
+}
+
+.post__content{
+  color: #3d3c3c;
+}
