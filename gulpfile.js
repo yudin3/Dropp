@@ -27,7 +27,10 @@ gulp.task('development', function () {
 });
 
 gulp.task('less', function () {
-    gulp.src('./css/style.less')
-    .pipe(less())
-    .pipe(gulp.dest('./public'));
+    gulp.src('css/**/*.less')
+    .pipe(less({
+      paths: ['css'],
+      filename: 'style.less'
+    }))
+    .pipe(gulp.dest('css'));
 });
