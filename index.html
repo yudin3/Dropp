@@ -722,12 +722,20 @@
     <div class="section__content contact-us__content">
       <div class="main-container">
         <form class="contact-us__form" method="post" name="message-form" action="#0">
-          <input id="name" class="contact-us__input" type="text" placeholder="Your name here">
-          <label class="contact-us__label" for="name">Name</label>
-          <input id="email" class="contact-us__input" type="email" placeholder="Email adress here">
-          <label class="contact-us__label" for="email">Email</label>
-          <textarea id="message" class="contact-us__textarea" placeholder="Your message here"></textarea>
-          <label class="contact-us__label" for="message">Message</label>
+          <div class="contact-us__form-inner">
+            <div class="contact-us__form-column">
+              <input id="name" class="contact-us__input" type="text" placeholder="Your name here">
+              <label class="contact-us__label" for="name">Name</label>
+            </div>
+            <div class="contact-us__form-column">
+              <input id="email" class="contact-us__input" type="email" placeholder="Email adress here">
+              <label class="contact-us__label" for="email">Email</label>
+            </div>
+          </div>
+          <div class="contact-us__form-message">
+            <textarea id="message" class="contact-us__textarea" placeholder="Your message here"></textarea>
+            <label class="contact-us__label" for="message">Message</label>
+          </div>
           <button class="button contact-us__button" type="submit">
             Send message now
           </button>
