@@ -2,10 +2,12 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
 <title>Dropp</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+  <div class="page">
   <header class="header">
     <div class="main-container header__container">
       <h1 class="header__logo title">
@@ -91,40 +93,40 @@
     <div class="section__content">
       <div class="portfolio__container">
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/post-1.png" alt="portfolio">
+          <img class="portfolio__img" src="images/post-1.png" alt="work-preview">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/post-2.png" alt="portfolio">
+          <img class="portfolio__img" src="images/post-2.png" alt="work-preview">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/post-1.png" alt="portfolio">
+          <img class="portfolio__img" src="images/post-1.png" alt="work-preview">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/post-2.png" alt="portfolio">
+          <img class="portfolio__img" src="images/post-2.png" alt="work-preview">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/post-3.png" alt="portfolio">
+          <img class="portfolio__img" src="images/post-3.png" alt="work-preview">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/post-4.png" alt="portfolio">
+          <img class="portfolio__img" src="images/post-4.png" alt="work-preview">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/post-5.png" alt="portfolio">
+          <img class="portfolio__img" src="images/post-5.png" alt="work-preview">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/post-6.png" alt="portfolio">
+          <img class="portfolio__img" src="images/post-6.png" alt="work-preview">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/post-5.png" alt="portfolio">
+          <img class="portfolio__img" src="images/post-5.png" alt="work-preview">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/post-6.png" alt="portfolio">
+          <img class="portfolio__img" src="images/post-6.png" alt="work-preview">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/post-7.png" alt="portfolio">
+          <img class="portfolio__img" src="images/post-7.png" alt="work-preview">
         </div>
         <div class="portfolio__item">
-          <img class="portfolio__img" src="images/post-8.png" alt="portfolio">
+          <img class="portfolio__img" src="images/post-8.png" alt="work-preview">
         </div>
       </div>
     </div>
@@ -141,22 +143,22 @@
       <div class="main-container about-us__employees">
         <div class="about-us__column">
           <label for="kim-gordon" class="about-us__employee-label">
-            <img class="about-us__employee-avatar" src="images/avatar-1.png" alt="kim-gordon">
+            <img class="about-us__employee-avatar" src="images/avatar-1.png" alt="kim-gordon-avatar">
           </label>
         </div>
         <div class="about-us__column">
           <label for="john-smith" class="about-us__employee-label">
-            <img class="about-us__employee-avatar" src="images/avatar-2.png" alt="john-smith">
+            <img class="about-us__employee-avatar" src="images/avatar-2.png" alt="john-smith-avatar">
           </label>
         </div>
         <div class="about-us__column">
           <label for="christa-paffgen" class="about-us__employee-label">
-            <img class="about-us__employee-avatar" src="images/avatar-3.png" alt="christa-paffgen">
+            <img class="about-us__employee-avatar" src="images/avatar-3.png" alt="christa-paffgen-avatar">
           </label>
         </div>
         <div class="about-us__column">
           <label for="susanne-kerner" class="about-us__employee-label">
-            <img class="about-us__employee-avatar" src="images/avatar-4.png" alt="susanne-kerner">
+            <img class="about-us__employee-avatar" src="images/avatar-4.png" alt="susanne-kerner-avatar">
           </label>
         </div>
       </div>
@@ -724,16 +726,16 @@
         <form class="contact-us__form" method="post" name="message-form" action="#0">
           <div class="contact-us__form-inner">
             <div class="contact-us__form-column">
-              <input id="name" class="contact-us__input" type="text" placeholder="Your name here">
+              <input id="name" class="contact-us__input" type="text" placeholder="Your name here" required>
               <label class="contact-us__label" for="name">Name</label>
             </div>
             <div class="contact-us__form-column">
-              <input id="email" class="contact-us__input" type="email" placeholder="Email adress here">
+              <input id="email" class="contact-us__input" type="email" placeholder="Email adress here" required>
               <label class="contact-us__label" for="email">Email</label>
             </div>
           </div>
           <div class="contact-us__form-message">
-            <textarea id="message" class="contact-us__textarea" placeholder="Your message here"></textarea>
+            <textarea id="message" class="contact-us__textarea" placeholder="Your message here" required></textarea>
             <label class="contact-us__label" for="message">Message</label>
           </div>
           <button class="button contact-us__button" type="submit">
@@ -748,5 +750,7 @@
       </footer>
     </div>
   </section>
+
+</div>
 </body>
 </html>
