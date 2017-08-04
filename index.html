@@ -7,7 +7,6 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <div class="page">
   <header class="header">
     <div class="main-container header__container">
       <h1 class="header__logo title">
@@ -723,19 +722,19 @@
     </header>
     <div class="section__content contact-us__content">
       <div class="main-container">
-        <form class="contact-us__form" method="post" name="message-form" action="#0">
+        <form class="contact-us__form" method="get" name="message-form" action="#0">
           <div class="contact-us__form-inner">
             <div class="contact-us__form-column">
-              <input id="name" class="contact-us__input" type="text" placeholder="Your name here" required>
+              <input name="name-field" id="name" class="contact-us__input" type="text" placeholder="Your name here" required>
               <label class="contact-us__label" for="name">Name</label>
             </div>
             <div class="contact-us__form-column">
-              <input id="email" class="contact-us__input" type="email" placeholder="Email adress here" required>
+              <input name="email-field" id="email" class="contact-us__input" type="email" placeholder="Email adress here" required>
               <label class="contact-us__label" for="email">Email</label>
             </div>
           </div>
           <div class="contact-us__form-message">
-            <textarea id="message" class="contact-us__textarea" placeholder="Your message here" required></textarea>
+            <textarea name="message-field" id="message" class="contact-us__textarea" placeholder="Your message here" required></textarea>
             <label class="contact-us__label" for="message">Message</label>
           </div>
           <button class="button contact-us__button" type="submit">
@@ -750,7 +749,5 @@
       </footer>
     </div>
   </section>
-
-</div>
 </body>
 </html>

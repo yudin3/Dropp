@@ -2,10 +2,6 @@ html{
   font-size: 62.5%;
 }
 
-.page{
-  width: 100%;
-}
-
 @media screen and (min-width: 1201px){
 
   html{
@@ -117,30 +113,52 @@ progress::-moz-progress-bar{
   min-width: 24%;
   max-width: 98%;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1%;
+  padding-right: 1%;
   position: relative;
-}
-
-@media screen and (max-width: 640px){
-
-  .main-container{
-    width: 90%;
-  }
 }
 
 .header{
   background-color: #fff;
 }
 
+@media screen and (min-width: 1201px){
+
+  .header{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+  }
+
+}
+
 .header__container{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .header__logo{
   color: #3d3c3c;
   font-size: 7rem;
+}
+
+@media screen and (max-width: 640px){
+
+  .header__logo{
+    font-size: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 641) and (max-width: 960px){
+
+  .header__logo{
+    font-size: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .header__logo-symbol{
@@ -151,6 +169,14 @@ progress::-moz-progress-bar{
   width: 78%;
   flex: none;
   text-align: end;
+}
+
+@media screen and (max-width: 960px){
+
+  .header__menu{
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .menu__item{
@@ -164,31 +190,54 @@ progress::-moz-progress-bar{
   cursor: pointer;
 }
 
+@media screen and (max-width: 640px){
+
+  .menu__item{
+    font-size: 1.2rem;
+  }
+}
+
 .header__menu-item{
   padding-top: 4.2rem;
   padding-bottom: 4.2rem;
 }
 
+@media screen and (max-width: 640px){
+
+  .header__menu-item{
+    padding-top: 2.1rem;
+    padding-bottom: 2.1rem;
+  }
+}
+
 .header__menu-item:hover{
   color: #fff;
   background-color: #fd5433;
-  transition: all 1s ease-out .2s;
+  transition: background-color, color .6s ease-out .2s;
 }
 
 .header__menu-item:focus{
-  outline: .1rem solid #fd5433;
+  outline: 1px solid #fd5433;
 }
 
 .banner{
   background-image: url("../images/banner-img.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   text-align: center;
   position: relative;
-  min-height: 800px;
+  min-height: 80rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (max-width: 640px){
+
+  .banner{
+    min-height: 40rem;
+  }
 }
 
 .banner::before{
@@ -207,6 +256,13 @@ progress::-moz-progress-bar{
   margin-bottom: 5rem;
 }
 
+@media screen and (max-width: 640px){
+
+  .banner__title{
+    font-size: 5rem;
+  }
+}
+
 .button{
   padding-top: .5rem;
   padding-bottom: .5rem;
@@ -216,7 +272,7 @@ progress::-moz-progress-bar{
   outline: none;
   cursor: pointer;
   background-color: #fd5433;
-  box-shadow: .1rem .2rem .1rem 0 rgba(0, 0, 0, .8), inset 0 .2rem .1rem 0 rgba(255, 255, 255, .3);
+  box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, .8), inset 0 2px 1px 0 rgba(255, 255, 255, .3);
   text-transform: uppercase;
   color: #fff;
 }
@@ -224,12 +280,14 @@ progress::-moz-progress-bar{
 .banner__button{
   border-radius: .5rem;
   font-size: 3.2rem;
-  padding: .6rem 49px;
+  padding: .6rem 4.9rem;
   word-spacing: 1rem;
 }
 
 .button:focus, .button:hover{
-  outline: .1rem solid black;
+  color: #fd5433;
+  background-color: #fff;
+  transition: all .6s ease-out .2s;
 }
 
 .section{
@@ -274,6 +332,18 @@ progress::-moz-progress-bar{
   padding-right: 2%;
 }
 
+@media screen and (max-width: 640px){
+
+  .services__column{
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .services__column:first-child{
+    margin-top: 0;
+  }
+}
+
 .services__column::before{
   content: "";
   display: inline-block;
@@ -282,6 +352,14 @@ progress::-moz-progress-bar{
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 3.1rem;
+}
+
+@media screen and (max-width: 640px){
+
+  .services__column::before{
+    padding-top: 25%;
+    padding-right: 25%;
+  }
 }
 
 .services__column_branding::before{
@@ -301,6 +379,13 @@ progress::-moz-progress-bar{
   color: #3d3c3c;
 }
 
+@media screen and (max-width: 640px){
+
+  .section__content-title{
+    margin-bottom: 1.6rem;
+  }
+}
+
 .portfolio__container{
   max-width: 160rem;
   margin: 0 auto;
@@ -315,6 +400,12 @@ progress::-moz-progress-bar{
   overflow: hidden;
   position: relative;
 }
+
+.portfolio__item:hover{
+  opacity: .6;
+  transition: opacity .5s;
+}
+
 
 .portfolio__img{
   position: absolute;
@@ -337,6 +428,11 @@ progress::-moz-progress-bar{
   padding-right: 2.3%;
   padding-left: 2.3%;
   position: relative;
+}
+
+.about-us__column:hover{
+  opacity: .6;
+  transition: opacity .5s;
 }
 
 .about-us__employee-info{
@@ -368,6 +464,13 @@ progress::-moz-progress-bar{
   width: 48.6%;
 }
 
+@media screen and (max-width: 640px){
+
+  .about-us__employee-info-column{
+    width: 100%;
+  }
+}
+
 .about-us__title{
   text-transform: none;
   margin-bottom: 5.5rem;
@@ -388,7 +491,7 @@ progress::-moz-progress-bar{
 }
 
 .about-us__socials-icon:hover, .about-us__socials-icon:focus{
-  outline: .1rem solid #9932cc;
+  outline: 1px solid #9932cc;
 }
 
 .about-us__socials-icon:last-child{
@@ -450,6 +553,13 @@ progress::-moz-progress-bar{
   vertical-align: baseline;
 }
 
+@media screen and (max-width: 640px){
+
+  .about-us__skill-progress{
+    width: 60%;
+  }
+}
+
 .latest-posts__content{
   padding-top: 10rem;
   padding-bottom: 10rem;
@@ -465,12 +575,23 @@ progress::-moz-progress-bar{
   margin-top: 8.3rem;
 }
 
+@media screen and (max-width: 640px){
+
+  .post{
+    width: 100%;
+  }
+}
+
 .post:first-child{
   margin-top: 0;
 }
 
+@media screen and (min-width: 640px){
+
 .post:nth-child(2){
   margin-top: 0;
+  }
+
 }
 
 .post__column{
@@ -484,14 +605,15 @@ progress::-moz-progress-bar{
 .post__header{
   position: relative;
   margin-bottom: 3.9rem;
+  padding-bottom: 17px;
 }
 
 .post__header::after{
   content: "";
   position: absolute;
   left: 0;
+  bottom: 0;
   width: 8rem;
-  height: 1.5rem;
   border-bottom: 4px solid #fd5433;
 }
 
