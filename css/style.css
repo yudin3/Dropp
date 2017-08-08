@@ -2,10 +2,18 @@ html{
   font-size: 62.5%;
 }
 
-@media screen and (min-width: 1201px){
+@media screen and (min-width: 1201px) and (max-width: 1440px){
 
   html{
     font-size: 62.5%;
+  }
+
+}
+
+@media screen and (min-width: 1441px){
+
+  html{
+    font-size: 68.75%;
   }
 
 }
@@ -36,6 +44,7 @@ body{
   font-family: "Arial", sans-serif;
   font-size: 1.6rem;
   margin: 0;
+  color: #3d3c3c;
 }
 
 textarea::-moz-placeholder{
@@ -44,6 +53,7 @@ textarea::-moz-placeholder{
 
 textarea::-webkit-input-placeholder{
  color: #fd5433;
+ font-size: 2rem;
 }
 
 input::-moz-placeholder{
@@ -52,10 +62,6 @@ input::-moz-placeholder{
 
 input::-webkit-input-placeholder{
  color: #fd5433;
-}
-
-input:focus, textarea:focus, input:hover, textarea:hover{
-  outline: 2px solid #fd5433;
 }
 
 img{
@@ -110,23 +116,28 @@ progress::-moz-progress-bar{
 }
 
 .main-container{
-  min-width: 24%;
   max-width: 98%;
+  position: relative;
+
   margin: 0 auto;
   padding-left: 1%;
   padding-right: 1%;
-  position: relative;
 }
 
 .header{
   background-color: #fff;
+  border-bottom: 1px solid #8e8e8e;
 }
 
 @media screen and (min-width: 1201px){
 
   .header{
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 10;
+    transform: translate3d(0, 0, 0);
+
     width: 100%;
   }
 
@@ -139,23 +150,14 @@ progress::-moz-progress-bar{
 }
 
 .header__logo{
-  color: #3d3c3c;
+  color: inherit;
   font-size: 7rem;
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 960px){
 
   .header__logo{
-    font-size: 4rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 641) and (max-width: 960px){
-
-  .header__logo{
-    font-size: 6rem;
+    font-size: 5rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -164,6 +166,13 @@ progress::-moz-progress-bar{
 .header__logo-symbol{
   color: #fd5433;
 }
+
+@media screen and (max-width: 960px){
+
+    .header__navigation{
+      display: block;
+    }
+  }
 
 .header__menu{
   width: 78%;
@@ -184,10 +193,9 @@ progress::-moz-progress-bar{
   text-transform: uppercase;
   font-family: "Oswald";
   font-size: 1.7rem;
-  color: #3d3c3c;
+  color: inherit;
   padding-left: 1.4%;
   padding-right: 1.4%;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 640px){
@@ -200,6 +208,8 @@ progress::-moz-progress-bar{
 .header__menu-item{
   padding-top: 4.2rem;
   padding-bottom: 4.2rem;
+  transition: color .4s ease-out, background-color .4s ease-out;
+  will-change: color, background-color;
 }
 
 @media screen and (max-width: 640px){
@@ -213,7 +223,7 @@ progress::-moz-progress-bar{
 .header__menu-item:hover{
   color: #fff;
   background-color: #fd5433;
-  transition: background-color, color .6s ease-out .2s;
+
 }
 
 .header__menu-item:focus{
@@ -227,7 +237,7 @@ progress::-moz-progress-bar{
   background-position: center;
   text-align: center;
   position: relative;
-  min-height: 80rem;
+  min-height: 75rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -266,28 +276,41 @@ progress::-moz-progress-bar{
 .button{
   padding-top: .5rem;
   padding-bottom: .5rem;
+  border: none;
+
   font-size: 1rem;
   font-family: "Oswald";
-  border: none;
+  color: #fff;
+  text-transform: uppercase;
+
+  border-radius: .5rem;
   outline: none;
   cursor: pointer;
-  background-color: #fd5433;
   box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, .8), inset 0 2px 1px 0 rgba(255, 255, 255, .3);
-  text-transform: uppercase;
-  color: #fff;
+
+  background-color: #fd5433;
+  transition: background-color .4s ease-out, color .4s;
 }
 
 .banner__button{
-  border-radius: .5rem;
   font-size: 3.2rem;
   padding: .6rem 4.9rem;
   word-spacing: 1rem;
 }
 
+@media screen and (max-width: 640px){
+
+  .banner__button{
+    font-size: 2.6rem;
+    padding: .4rem 3rem;
+    word-spacing: .7rem;
+  }
+}
+
 .button:focus, .button:hover{
   color: #fd5433;
   background-color: #fff;
-  transition: all .6s ease-out .2s;
+
 }
 
 .section{
@@ -336,7 +359,7 @@ progress::-moz-progress-bar{
 
   .services__column{
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
   }
 
   .services__column:first-child{
@@ -362,21 +385,21 @@ progress::-moz-progress-bar{
   }
 }
 
-.services__column_branding::before{
+.services__branding::before{
   background-image: url("../images/pen.png");
 }
 
-.services__column_web-design::before{
+.services__web-design::before{
   background-image: url("../images/pc.png");
 }
 
-.services__column_marketing::before{
+.services__marketing::before{
   background-image: url("../images/mic.png");
 }
 
 .section__content-title{
   margin-bottom: 3.2rem;
-  color: #3d3c3c;
+  color: inherit;
 }
 
 @media screen and (max-width: 640px){
@@ -399,6 +422,14 @@ progress::-moz-progress-bar{
   width: 16.667%;
   overflow: hidden;
   position: relative;
+}
+
+@media screen and (max-width: 640px){
+
+  .portfolio__item{
+    padding-top: 28.4%;
+    width: 33.334%;
+  }
 }
 
 .portfolio__item:hover{
@@ -428,6 +459,7 @@ progress::-moz-progress-bar{
   padding-right: 2.3%;
   padding-left: 2.3%;
   position: relative;
+  text-align: center;
 }
 
 .about-us__column:hover{
@@ -466,8 +498,18 @@ progress::-moz-progress-bar{
 
 @media screen and (max-width: 640px){
 
+  .about-us__container{
+    padding-top: 4.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .about-us__employee-info-column{
     width: 100%;
+    margin-top: 3rem;
+  }
+
+  .about-us__employee-info-column:first-child{
+    margin-top: 0;
   }
 }
 
@@ -491,7 +533,7 @@ progress::-moz-progress-bar{
 }
 
 .about-us__socials-icon:hover, .about-us__socials-icon:focus{
-  outline: 1px solid #9932cc;
+  background-color: #9932cc;
 }
 
 .about-us__socials-icon:last-child{
@@ -527,7 +569,7 @@ progress::-moz-progress-bar{
 .about-us__skill{
   display: flex;
   justify-content: space-between;
-  margin-bottom: .9rem;
+  margin-bottom: 1.5rem;
 }
 
 .about-us__skill:last-child{
@@ -542,6 +584,9 @@ progress::-moz-progress-bar{
 
 .about-us__progress-bar{
   width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .about-us__skill-progress{
@@ -550,7 +595,6 @@ progress::-moz-progress-bar{
   height: 1rem;
   border: none;
   margin-right: 1.5rem;
-  vertical-align: baseline;
 }
 
 @media screen and (max-width: 640px){
@@ -586,7 +630,7 @@ progress::-moz-progress-bar{
   margin-top: 0;
 }
 
-@media screen and (min-width: 640px){
+@media screen and (min-width: 641px){
 
 .post:nth-child(2){
   margin-top: 0;
@@ -596,6 +640,10 @@ progress::-moz-progress-bar{
 
 .post__column{
   width: 48%;
+}
+
+.post__column:first-child{
+  text-align: center;
 }
 
 .post__image{
@@ -618,7 +666,7 @@ progress::-moz-progress-bar{
 }
 
 .post__title{
-  color: #3d3c3c;
+  color: inherit;
   margin-bottom: .7rem;
 }
 
@@ -631,7 +679,7 @@ progress::-moz-progress-bar{
 }
 
 .post__content{
-  color: #3d3c3c;
+  color: inherit;
 }
 
 .contact-us__content{
@@ -651,19 +699,35 @@ progress::-moz-progress-bar{
   display: flex;
   justify-content: space-between;
   margin-bottom: 2.2rem;
+  flex-wrap: wrap;
 }
 
 .contact-us__form-column{
-  box-sizing: border-box;
   width: 48.6%;
-  border: 1px solid grey;
 }
 
-.contact-us__input, .contact-us__textarea{
+.contact-us__input-field:focus, .contact-us__input-field:hover{
+  outline: 2px solid #fd5433;
+}
+
+@media screen and (max-width: 640px){
+
+  .contact-us__form-column{
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .contact-us__form-column:first-child{
+    margin-top: 0;
+  }
+}
+
+.contact-us__input-field{
   box-sizing: border-box;
   width: 100%;
   padding: 1.5rem 2rem;
   font-size: 2rem;
+  outline: 0;
 }
 
 .contact-us__label{
@@ -686,6 +750,13 @@ progress::-moz-progress-bar{
   width: 100%;
   text-align: center;
   font-size: 2.6rem;
+}
+
+@media screen and (max-width: 640px){
+
+  .contact-us__button{
+    font-size: 2rem;
+  }
 }
 
 .contact-us__footer{
