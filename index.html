@@ -722,28 +722,30 @@
     </header>
     <div class="section__content contact-us__content">
       <div class="main-container">
-        <form class="contact-us__form" method="get" name="message-form" action="#0">
-          <div class="contact-us__form-inner">
-            <div class="contact-us__form-column">
-              <input name="name-field" id="name" class="contact-us__input-field" type="text" placeholder="Your name here" required>
+        <form class="contact-us__form form" method="get" name="message-form" action="#0">
+          <div class="form__row">
+            <div class="form__column">
+              <input name="name-field" id="name" class="field" type="text" placeholder="Your name here" required>
               <label class="contact-us__label" for="name">Name</label>
             </div>
-            <div class="contact-us__form-column">
-              <input name="email-field" id="email" class="contact-us__input-field" type="email" placeholder="Email adress here" required>
+            <div class="form__column">
+              <input name="email-field" id="email" class="field" type="email" placeholder="Email adress here" required>
               <label class="contact-us__label" for="email">Email</label>
             </div>
           </div>
-          <div class="contact-us__form-message contact-us__form-column">
-            <textarea name="message-field" id="message" class="contact-us__input-field contact-us__textarea" placeholder="Your message here" required></textarea>
+          <div class="form__row">
+            <textarea name="message-field" id="message" class="field textarea" placeholder="Your message here" required></textarea>
             <label class="contact-us__label" for="message">Message</label>
           </div>
-          <button class="button contact-us__button" type="submit">
-            Send message now
-          </button>
+          <div class="form__row">
+            <button class="button contact-us__button" type="submit">
+              Send message now
+            </button>
+          </div>
         </form>
       </div>
       <footer class="contact-us__footer">
-        <span class="contact-us__footer-text">
+        <span class="contact-us__copyright">
           © 2014 | Original <b>Grafixity</b> Theme | Powered by <b>WordPress</b>
         </span>
       </footer>

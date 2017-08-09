@@ -10,14 +10,6 @@ html{
 
 }
 
-@media screen and (min-width: 1441px){
-
-  html{
-    font-size: 68.75%;
-  }
-
-}
-
 @media screen and (min-width: 641px) and (max-width: 1200px){
 
   html{
@@ -116,12 +108,13 @@ progress::-moz-progress-bar{
 }
 
 .main-container{
-  max-width: 98%;
+  box-sizing: border-box;
+  max-width: 1170px;
   position: relative;
 
   margin: 0 auto;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .header{
@@ -247,6 +240,7 @@ progress::-moz-progress-bar{
 
   .banner{
     min-height: 40rem;
+    background-image: url("../images/banner-img-mobile.png");
   }
 }
 
@@ -278,7 +272,7 @@ progress::-moz-progress-bar{
   padding-bottom: .5rem;
   border: none;
 
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-family: "Oswald";
   color: #fff;
   text-transform: uppercase;
@@ -310,7 +304,6 @@ progress::-moz-progress-bar{
 .button:focus, .button:hover{
   color: #fd5433;
   background-color: #fff;
-
 }
 
 .section{
@@ -341,6 +334,14 @@ progress::-moz-progress-bar{
   padding-bottom: 4.8rem;
 }
 
+@media screen and (max-width: 640px){
+
+  .services__content{
+    padding-top: 3.8rem;
+    padding-bottom: 2.8rem;
+  }
+}
+
 .services__container{
   display: flex;
   justify-content: space-between;
@@ -359,7 +360,7 @@ progress::-moz-progress-bar{
 
   .services__column{
     width: 100%;
-    margin-top: 2.5rem;
+    margin-top: 4.1rem;
   }
 
   .services__column:first-child{
@@ -382,6 +383,7 @@ progress::-moz-progress-bar{
   .services__column::before{
     padding-top: 25%;
     padding-right: 25%;
+    margin-bottom: 2rem;
   }
 }
 
@@ -499,13 +501,13 @@ progress::-moz-progress-bar{
 @media screen and (max-width: 640px){
 
   .about-us__container{
-    padding-top: 4.5rem;
+    padding-top: 3.4rem;
     padding-bottom: 2.5rem;
   }
 
   .about-us__employee-info-column{
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 3.6rem;
   }
 
   .about-us__employee-info-column:first-child{
@@ -530,6 +532,17 @@ progress::-moz-progress-bar{
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 640px){
+
+  .about-us__title{
+    margin-bottom: 3.5rem;
+  }
+
+  .about-us__content{
+    margin-bottom: 3rem;
+  }
 }
 
 .about-us__socials-icon:hover, .about-us__socials-icon:focus{
@@ -612,10 +625,19 @@ progress::-moz-progress-bar{
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 640px){
+
+  .latest-posts__content{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
 .post{
   width: 48.5%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 8.3rem;
 }
 
@@ -623,6 +645,7 @@ progress::-moz-progress-bar{
 
   .post{
     width: 100%;
+    margin-top: 4.8rem;
   }
 }
 
@@ -644,6 +667,18 @@ progress::-moz-progress-bar{
 
 .post__column:first-child{
   text-align: center;
+}
+
+@media screen and (max-width: 640px){
+
+  .post__column{
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .post__column:first-child{
+    margin-top: 0;
+  }
 }
 
 .post__image{
@@ -691,38 +726,37 @@ progress::-moz-progress-bar{
 }
 
 .contact-us__form{
-  position: relative;
   margin-bottom: 8.5rem;
 }
 
-.contact-us__form-inner{
+.form__row{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2.2rem;
   flex-wrap: wrap;
+  margin-bottom: 2.2rem;
 }
 
-.contact-us__form-column{
+.form__row:last-child{
+  margin-bottom: 0;
+}
+
+.form__column{
   width: 48.6%;
-}
-
-.contact-us__input-field:focus, .contact-us__input-field:hover{
-  outline: 2px solid #fd5433;
 }
 
 @media screen and (max-width: 640px){
 
-  .contact-us__form-column{
+  .form__column{
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
-  .contact-us__form-column:first-child{
+  .form__column:first-child{
     margin-top: 0;
   }
 }
 
-.contact-us__input-field{
+.field{
   box-sizing: border-box;
   width: 100%;
   padding: 1.5rem 2rem;
@@ -730,17 +764,16 @@ progress::-moz-progress-bar{
   outline: 0;
 }
 
+.field:focus, .field:hover{
+  outline: 2px solid #fd5433;
+}
+
 .contact-us__label{
   position: absolute;
   left: -9999px;
 }
 
-.contact-us__form-message{
-  width: 100%;
-  margin-bottom: 2.1rem;
-}
-
-.contact-us__textarea{
+.textarea{
   min-height: 23rem;
   max-height: 40rem;
 }
@@ -768,7 +801,7 @@ progress::-moz-progress-bar{
   min-height: 6rem;
 }
 
-.contact-us__footer-text{
+.contact-us__copyright{
   font-size: 1.8rem;
   color: #fff;
 }
