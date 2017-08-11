@@ -142,8 +142,8 @@ progress::-moz-progress-bar{
 
 .section__header{
   border-bottom: 1px solid #8e8e8e;
-  padding-top: 2.9rem;
-  padding-bottom: 2.6rem;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
 }
 
 .section__header-title{
@@ -156,8 +156,21 @@ progress::-moz-progress-bar{
 }
 
 .section__content-title{
-  margin-bottom: 3.2rem;
   color: inherit;
+}
+
+@media screen (max-width: 640px){
+
+  .section__content-title{
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen (min-width: 641px){
+
+  .section__content-title{
+    margin-bottom: 3rem;
+  }
 }
 
 .main-container{
@@ -184,9 +197,8 @@ progress::-moz-progress-bar{
 
 .header__menu-swither{
   background-image: url("../images/menu_icon.svg");
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
-  position: relative;
   height: 8rem;
 }
 
@@ -194,7 +206,7 @@ progress::-moz-progress-bar{
   display: block;
   position: relative;
   top: 25%;
-  left: 25%;
+  left: 60%;
   width: 50%;
   height: 50%;
   text-indent: -9999px;
@@ -202,7 +214,6 @@ progress::-moz-progress-bar{
 
 .header__logo{
   color: inherit;
-  font-size: 7rem;
 }
 
 .header__logo-symbol{
@@ -219,15 +230,15 @@ progress::-moz-progress-bar{
   display: inline-block;
   text-transform: uppercase;
   font-family: "Oswald";
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: inherit;
   padding-left: 1.4%;
   padding-right: 1.4%;
 }
 
 .header__menu-item{
-  padding-top: 4.2rem;
-  padding-bottom: 4.2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   transition: color .4s ease-out, background-color .4s ease-out;
   will-change: color, background-color;
 }
@@ -259,18 +270,23 @@ progress::-moz-progress-bar{
   .header__menu-swither{
     display: none;
   }
+
+  .header__logo{
+    font-size: 7rem;
+  }
 }
 
 @media screen and (max-width: 960px){
 
   .header__logo{
     font-size: 5rem;
-    margin-left: auto;
-    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-right: auto;
   }
 
-  .header__navigation{
+  .header__menu-swither{
       display: block;
+      margin-right: 2rem;
   }
 
   .header__menu{
@@ -287,12 +303,12 @@ progress::-moz-progress-bar{
 @media screen and (max-width: 640px){
 
   .menu__item{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   .header__menu-item{
-    padding-top: 2.1rem;
-    padding-bottom: 2.1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -303,7 +319,6 @@ progress::-moz-progress-bar{
   background-position: center;
   text-align: center;
   position: relative;
-  min-height: 75rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -326,8 +341,8 @@ progress::-moz-progress-bar{
 }
 
 .banner__button{
-  font-size: 3.2rem;
-  padding: .6rem 4.9rem;
+  font-size: 3rem;
+  padding: .6rem 5rem;
   word-spacing: 1rem;
 }
 
@@ -349,13 +364,15 @@ progress::-moz-progress-bar{
   }
 }
 
-.services{
-  text-align: center;
+@media screen and (min-width: 641px){
+
+  .banner{
+    min-height: 75rem;
+  }
 }
 
-.services__content{
-  padding-top: 6.2rem;
-  padding-bottom: 4.8rem;
+.services{
+  text-align: center;
 }
 
 .services__container{
@@ -367,7 +384,6 @@ progress::-moz-progress-bar{
 
 .services__column{
   box-sizing: border-box;
-  width: 33%;
   padding-left: 2%;
   padding-right: 2%;
 }
@@ -375,11 +391,8 @@ progress::-moz-progress-bar{
 .services__column::before{
   content: "";
   display: inline-block;
-  padding-top: 50%;
-  padding-right: 50%;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 3.1rem;
 }
 
 .services__branding::before{
@@ -398,27 +411,40 @@ progress::-moz-progress-bar{
 @media screen and (max-width: 640px){
 
   .services__content{
-    padding-top: 3.8rem;
-    padding-bottom: 2.8rem;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
   }
 
   .services__column{
     width: 100%;
-    margin-top: 4.1rem;
   }
 
-  .services__column:first-child{
-    margin-top: 0;
+  .services__column:not(:first-child){
+    margin-top: 4rem;
   }
 
   .services__column::before{
     padding-top: 25%;
     padding-right: 25%;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 641px){
+
+  .services__content{
+    padding-top: 6rem;
+    padding-bottom: 5rem;
   }
 
-  .section__content-title{
-    margin-bottom: 1.2rem;
+  .services__column{
+    width: 33%;
+  }
+
+  .services__column::before{
+    padding-top: 50%;
+    padding-right: 50%;
+    margin-bottom: 3rem;
   }
 }
 
@@ -431,10 +457,11 @@ progress::-moz-progress-bar{
 }
 
 .portfolio__item{
-  padding-top: 14.2%;
   width: 16.667%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  position: relative;
 }
 
 .portfolio__item:hover{
@@ -442,18 +469,9 @@ progress::-moz-progress-bar{
   transition: opacity .5s;
 }
 
-
-.portfolio__img{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 @media screen and (max-width: 640px){
 
   .portfolio__item{
-    padding-top: 28.4%;
     width: 33.334%;
   }
 }
@@ -468,7 +486,6 @@ progress::-moz-progress-bar{
 
 .about-us__column{
   box-sizing: border-box;
-  width: 25%;
   padding-right: 2.3%;
   padding-left: 2.3%;
   position: relative;
@@ -485,11 +502,6 @@ progress::-moz-progress-bar{
   color: #fff;
 }
 
-.about-us__container{
-  padding-top: 6.5rem;
-  padding-bottom: 4.5rem;
-}
-
 .about-us__employee{
   display: none;
 }
@@ -499,6 +511,17 @@ progress::-moz-progress-bar{
   left: -9999px;
 }
 
+@keyframes show{
+
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
 #kim-gordon:checked ~ .about-us__employee:nth-of-type(1),
 #john-smith:checked ~ .about-us__employee:nth-of-type(2),
 #christa-paffgen:checked ~ .about-us__employee:nth-of-type(3),
@@ -506,19 +529,13 @@ progress::-moz-progress-bar{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.about-us__employee-info-column{
-  width: 48.6%;
+  animation-name: show;
+  animation-duration: 1s;
+  animation-timing-function: linear;
 }
 
 .about-us__title{
   text-transform: none;
-  margin-bottom: 5.5rem;
-}
-
-.about-us__content{
-  margin-bottom: 5rem;
 }
 
 .about-us__socials-icon{
@@ -557,7 +574,7 @@ progress::-moz-progress-bar{
 
 .about-us__youtube-icon{
   background-image: url("../images/youtube.svg");
-  width: 3.1rem;
+  width: 3rem;
 }
 
 .about-us__socials-text{
@@ -590,7 +607,6 @@ progress::-moz-progress-bar{
 
 .about-us__skill-progress{
   background-color: #fd5433;
-  width: 80%;
   height: 1rem;
   border: none;
   margin-right: 1.5rem;
@@ -634,12 +650,46 @@ progress::-moz-progress-bar{
   }
 }
 
+@media screen and (min-width: 641px){
+
+  .about-us__container{
+    padding-top: 6.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .about-us__employee-info-column{
+    width: 48.6%;
+  }
+
+  .about-us__column{
+    width: 25%;
+  }
+
+  .about-us__title{
+    margin-bottom: 5.5rem;
+  }
+
+  .about-us__content{
+    margin-bottom: 5rem;
+  }
+
+  .about-us__skill-progress{
+    width: 80%;
+  }
+}
+
 .latest-posts__content{
-  padding-top: 10rem;
-  padding-bottom: 10rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+@media screen and (min-width: 641px){
+
+  .latest-posts__content{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
 }
 
 @media screen and (max-width: 640px){
@@ -651,11 +701,9 @@ progress::-moz-progress-bar{
 }
 
 .post{
-  width: 48.5%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 8.3rem;
 }
 
 .post:first-child{
@@ -670,13 +718,9 @@ progress::-moz-progress-bar{
   text-align: center;
 }
 
-.post__image{
-  margin-top: .9rem;
-}
-
 .post__header{
   position: relative;
-  margin-bottom: 3.9rem;
+  margin-bottom: 4rem;
   padding-bottom: 17px;
 }
 
@@ -710,16 +754,15 @@ progress::-moz-progress-bar{
 
   .post{
     width: 100%;
-    margin-top: 4.8rem;
+    margin-top: 5rem;
   }
 
   .post__column{
     width: 100%;
-    margin-top: 2rem;
   }
 
-  .post__column:first-child{
-    margin-top: 0;
+  .post__column:not(:first-child){
+    margin-top: 2rem;
   }
 
   .post__header{
@@ -729,9 +772,26 @@ progress::-moz-progress-bar{
 
 @media screen and (min-width: 641px){
 
-.post:nth-child(2){
-  margin-top: 0;
+  .post{
+    width: 48.5%;
+    margin-top: 8.3rem;
   }
+
+  .post__column{
+    width: 48%;
+  }
+
+  .post__image{
+    margin-top: .9rem;
+  }
+
+  .post__header{
+    margin-bottom: 2rem;
+  }
+
+  .post:nth-child(2){
+    margin-top: 0;
+    }
 }
 
 .contact-us__content{
@@ -750,26 +810,27 @@ progress::-moz-progress-bar{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 2.2rem;
 }
 
-.form__row:last-child{
-  margin-bottom: 0;
+.form__row:not(:last-child){
+  margin-bottom: 2rem;
 }
 
-.form__column{
-  width: 48.6%;
+@media screen and (min-width: 641px){
+
+  .form__column{
+    width: 48.6%;
+  }
 }
 
 @media screen and (max-width: 640px){
 
   .form__column{
     width: 100%;
-    margin-top: 2rem;
   }
 
-  .form__column:first-child{
-    margin-top: 0;
+  .form__column:not(:first-child){
+    margin-top: 2rem;
   }
 }
 
@@ -805,8 +866,8 @@ progress::-moz-progress-bar{
 .contact-us__footer{
   box-sizing: border-box;
   border-top: 1px solid #fff;
-  padding-top: 2.3rem;
-  padding-bottom: 2.1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   text-align: center;
   min-height: 6rem;
 }
@@ -814,11 +875,4 @@ progress::-moz-progress-bar{
 .contact-us__copyright{
   font-size: 1.8rem;
   color: #fff;
-}
-
-@media screen and (max-width: 640px){
-
-  .contact-us__button{
-    font-size: 2rem;
-  }
 }
